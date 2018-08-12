@@ -14,10 +14,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn = findViewById(R.id.buttonTask);
+        Button btnLoader = findViewById(R.id.buttonloader);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getBaseContext(), AsynTascActivity.class);
+                startActivity(i);
+            }
+        });
+
+        btnLoader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getBaseContext(), LoaderActivity.class);
                 startActivity(i);
             }
         });
